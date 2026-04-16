@@ -306,7 +306,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: background 0.2s, opacity 0.2s;
     flex-shrink: 0;
   }
 
@@ -323,7 +323,7 @@
 
   .gallery-progress-bar {
     height: 100%;
-    width: 25%;
+    width: 20%;
     background: var(--green-mid);
     border-radius: 3px;
     transition: width 0.3s ease;
@@ -702,13 +702,13 @@
       <svg viewBox="0 0 24 24" fill="currentColor">
         <path d="M12 2C6.48 2 2 5.93 2 10.8c0 2.7 1.27 5.1 3.26 6.77L4.2 21l4.15-1.37A10.7 10.7 0 0012 20c5.52 0 10-3.93 10-8.8C22 5.93 17.52 2 12 2z"/>
       </svg>
-      加入仲介 LINE
+      和中信鄧小姐成為好友
     </a>
     <a href="#" class="btn btn-call" id="btnCall">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
         <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11.5 19.79 19.79 0 01.22 2.82 2 2 0 012.18 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 8.09A16 16 0 0015.91 17l.55-.55a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
       </svg>
-      直接致電仲介
+      致電中信鄧小姐
     </a>
   </div>
 </section>
@@ -736,11 +736,17 @@
 
   const galleryScroll = document.querySelector('.gallery-scroll');
   const progressBar = document.getElementById('galleryProgress');
+  const arrowLeft = document.querySelector('.gallery-arrow:first-child');
+  const arrowRight = document.querySelector('.gallery-arrow:last-child');
 
   function updateProgress() {
     const max = galleryScroll.scrollWidth - galleryScroll.clientWidth;
     const pct = max > 0 ? (galleryScroll.scrollLeft / max) * 100 : 0;
     progressBar.style.width = pct + '%';
+    arrowLeft.style.opacity = galleryScroll.scrollLeft <= 0 ? '0.3' : '1';
+    arrowLeft.style.pointerEvents = galleryScroll.scrollLeft <= 0 ? 'none' : 'auto';
+    arrowRight.style.opacity = galleryScroll.scrollLeft >= max - 1 ? '0.3' : '1';
+    arrowRight.style.pointerEvents = galleryScroll.scrollLeft >= max - 1 ? 'none' : 'auto';
   }
 
   function scrollGallery(dir) {
