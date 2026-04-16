@@ -37,7 +37,6 @@
     overflow-x: hidden;
   }
 
-  /* ── HERO ── */
   .hero {
     position: relative;
     height: 100svh;
@@ -48,16 +47,11 @@
     justify-content: flex-end;
   }
 
-  .hero-slides {
-    position: absolute;
-    inset: 0;
-  }
+  .hero-slides { position: absolute; inset: 0; }
 
   .hero-slide {
     position: absolute;
     inset: 0;
-    background-size: cover;
-    background-position: center;
     opacity: 0;
     transition: opacity 1.2s ease-in-out;
   }
@@ -76,10 +70,10 @@
     inset: 0;
     background: linear-gradient(
       to bottom,
-      rgba(0,0,0,0.05) 0%,
-      rgba(0,0,0,0.02) 40%,
-      rgba(20,30,15,0.65) 75%,
-      rgba(20,30,15,0.85) 100%
+      rgba(0,0,0,0.15) 0%,
+      rgba(0,0,0,0.1) 30%,
+      rgba(10,20,8,0.78) 60%,
+      rgba(10,20,8,0.96) 100%
     );
   }
 
@@ -91,11 +85,10 @@
   }
 
   .hero-tag {
-    font-family: var(--font-sans);
     font-size: 17px;
     font-weight: 400;
     letter-spacing: 0.2em;
-    color: rgba(255,255,255,0.75);
+    color: rgba(255,255,255,0.95);
     margin-bottom: 0.75rem;
     text-transform: uppercase;
   }
@@ -109,15 +102,12 @@
     margin-bottom: 0.5rem;
   }
 
-  .hero-title span {
-    color: #c8e898;
-  }
+  .hero-title span { color: #c8e898; }
 
   .hero-subtitle {
-    font-family: var(--font-sans);
     font-size: 16px;
     font-weight: 400;
-    color: rgba(255,255,255,0.7);
+    color: rgba(255,255,255,0.92);
     letter-spacing: 0.05em;
     margin-bottom: 2rem;
   }
@@ -136,14 +126,9 @@
     color: #c8e898;
   }
 
-  .hero-price-unit {
-    font-size: 16px;
-    color: rgba(255,255,255,0.6);
-  }
-
   .hero-price-sub {
     font-size: 18px;
-    color: rgba(255,255,255,0.55);
+    color: rgba(255,255,255,0.88);
     margin-bottom: 2rem;
   }
 
@@ -166,51 +151,21 @@
 
   .hero-dot.active { background: white; }
 
-  /* ── SCROLL CUE ── */
-  .scroll-cue {
-    position: absolute;
-    bottom: 2.8rem;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    color: rgba(255,255,255,0.5);
-    font-size: 13px;
-    letter-spacing: 0.15em;
-    animation: bounce 2s infinite;
-  }
-
-  .scroll-cue-line {
-    width: 1px;
-    height: 32px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent);
-  }
-
-  @keyframes bounce {
-    0%, 100% { transform: translateX(-50%) translateY(0); }
-    50% { transform: translateX(-50%) translateY(5px); }
-  }
-
-  /* ── SECTION BASE ── */
-  section {
-    padding: 3.5rem 2rem;
-  }
+  section { padding: 3.5rem 2rem; }
 
   .section-label {
-    font-size: 13px;
-    letter-spacing: 0.25em;
+    font-size: 15px;
+    letter-spacing: 0.2em;
     color: var(--green-mid);
     text-transform: uppercase;
     margin-bottom: 0.75rem;
-    font-weight: 400;
+    font-weight: 600;
   }
 
   .section-title {
     font-family: var(--font-serif);
-    font-size: 1.75rem;
-    font-weight: 400;
+    font-size: 2rem;
+    font-weight: 500;
     color: var(--text-dark);
     line-height: 1.5;
     margin-bottom: 1.5rem;
@@ -223,10 +178,7 @@
     margin: 1.25rem 0;
   }
 
-  /* ── INTRO ── */
-  .intro {
-    background: var(--warm-white);
-  }
+  .intro { background: var(--warm-white); }
 
   .intro-body {
     font-size: 18px;
@@ -235,10 +187,7 @@
     font-weight: 400;
   }
 
-  /* ── FEATURES ── */
-  .features {
-    background: var(--cream);
-  }
+  .features { background: var(--cream); }
 
   .feature-list {
     display: flex;
@@ -266,10 +215,7 @@
     margin-top: 2px;
   }
 
-  .feature-icon svg {
-    width: 18px;
-    height: 18px;
-  }
+  .feature-icon svg { width: 18px; height: 18px; }
 
   .feature-text h3 {
     font-size: 17px;
@@ -285,10 +231,7 @@
     line-height: 1.7;
   }
 
-  /* ── SPECS ── */
-  .specs {
-    background: var(--warm-white);
-  }
+  .specs { background: var(--warm-white); }
 
   .spec-grid {
     display: grid;
@@ -305,9 +248,7 @@
     text-align: center;
   }
 
-  .spec-card.wide {
-    grid-column: 1 / -1;
-  }
+  .spec-card.wide { grid-column: 1 / -1; }
 
   .spec-value {
     font-family: var(--font-serif);
@@ -318,10 +259,7 @@
     margin-bottom: 0.35rem;
   }
 
-  .spec-value span {
-    font-size: 1rem;
-    color: var(--text-light);
-  }
+  .spec-value span { font-size: 1rem; color: var(--text-light); }
 
   .spec-label {
     font-size: 17px;
@@ -330,16 +268,12 @@
     font-weight: 400;
   }
 
-  /* ── GALLERY ── */
   .gallery {
     padding: 3.5rem 0;
     background: var(--cream);
   }
 
-  .gallery-header {
-    padding: 0 2rem;
-    margin-bottom: 1.5rem;
-  }
+  .gallery-header { padding: 0 2rem; margin-bottom: 1.5rem; }
 
   .gallery-scroll {
     display: flex;
@@ -352,6 +286,48 @@
   }
 
   .gallery-scroll::-webkit-scrollbar { display: none; }
+
+  .gallery-arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.25rem 2rem 0;
+  }
+
+  .gallery-arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid var(--green-mid);
+    background: white;
+    color: var(--green-deep);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+    flex-shrink: 0;
+  }
+
+  .gallery-arrow:active { background: var(--green-pale); }
+  .gallery-arrow svg { width: 20px; height: 20px; }
+
+  .gallery-progress {
+    flex: 1;
+    height: 3px;
+    background: var(--green-pale);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .gallery-progress-bar {
+    height: 100%;
+    width: 25%;
+    background: var(--green-mid);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+  }
 
   .gallery-img {
     width: 260px;
@@ -366,7 +342,6 @@
 
   .gallery-img:hover { opacity: 0.9; }
 
-  /* ── LIGHTBOX ── */
   .lightbox {
     display: none;
     position: fixed;
@@ -411,10 +386,7 @@
     letter-spacing: 0.1em;
   }
 
-  /* ── LOCATION ── */
-  .location {
-    background: var(--warm-white);
-  }
+  .location { background: var(--warm-white); }
 
   .location-address {
     background: var(--cream);
@@ -449,11 +421,7 @@
     margin-top: 1rem;
   }
 
-  .map-placeholder iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
+  .map-placeholder iframe { width: 100%; height: 100%; border: none; }
 
   .nearby-list {
     margin-top: 1.5rem;
@@ -479,7 +447,6 @@
     flex-shrink: 0;
   }
 
-  /* ── CTA ── */
   .cta {
     background: var(--green-deep);
     padding: 3.5rem 2rem;
@@ -505,7 +472,7 @@
 
   .cta-subtitle {
     font-size: 16px;
-    color: rgba(255,255,255,0.55);
+    color: rgba(255,255,255,0.88);
     font-weight: 400;
     margin-bottom: 2.5rem;
   }
@@ -533,32 +500,10 @@
   }
 
   .btn:active { transform: scale(0.97); }
+  .btn-line { background: #06C755; color: white; }
+  .btn-call { background: white; color: var(--green-deep); }
+  .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
 
-  .btn-line {
-    background: #06C755;
-    color: white;
-  }
-
-  .btn-call {
-    background: white;
-    color: var(--green-deep);
-  }
-
-  .btn-query {
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.3);
-    color: rgba(255,255,255,0.8);
-    font-size: 16px;
-    padding: 0.8rem 1.5rem;
-  }
-
-  .btn svg {
-    width: 20px;
-    height: 20px;
-    flex-shrink: 0;
-  }
-
-  /* ── FOOTER ── */
   footer {
     background: var(--earth-dark);
     padding: 2rem;
@@ -572,7 +517,6 @@
     line-height: 1.8;
   }
 
-  /* ── PAGE LOAD ANIMATION ── */
   .fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -587,26 +531,23 @@
 </head>
 <body>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-slides" id="heroSlides">
     <div class="hero-slide active"><img src="33749610_2_b.jpeg" alt="農地全景"></div>
     <div class="hero-slide"><img src="33749610_4_b.jpeg" alt="稻田道路"></div>
     <div class="hero-slide"><img src="33749610_6_b.jpeg" alt="田野近景"></div>
-    <div class="hero-slide"><img src="33749610_1_b.jpeg" alt="育人國小"></div>
+    <div class="hero-slide"><img src="33749610_1_b.jpeg" alt="育仁國小"></div>
   </div>
   <div class="hero-overlay"></div>
-
   <div class="hero-content">
     <div class="hero-tag">桃園市 · 觀音區 · 農地</div>
     <h1 class="hero-title">在稻香裡<br><span>找到心的位置</span></h1>
     <p class="hero-subtitle">金橋路育仁段 · 342坪平坦農地</p>
     <div class="hero-price-row">
-      <div class="hero-price">906<span style="font-size:1.1rem">萬</span></div>
+      <div class="hero-price">906<span style="font-size:1.2rem">萬</span></div>
     </div>
     <p class="hero-price-sub">2.65萬元／坪 · 總面積 342.43坪</p>
   </div>
-
   <div class="hero-dots" id="heroDots">
     <div class="hero-dot active" onclick="goSlide(0)"></div>
     <div class="hero-dot" onclick="goSlide(1)"></div>
@@ -615,7 +556,6 @@
   </div>
 </section>
 
-<!-- INTRO -->
 <section class="intro fade-in">
   <div class="section-label">關於這塊土地</div>
   <h2 class="section-title">田野之間，<br>一片等待故事的土地</h2>
@@ -625,7 +565,6 @@
   </p>
 </section>
 
-<!-- FEATURES -->
 <section class="features fade-in">
   <div class="section-label">土地特色</div>
   <h2 class="section-title">慢活理想，<br>從這片土地開始</h2>
@@ -669,7 +608,6 @@
   </div>
 </section>
 
-<!-- SPECS -->
 <section class="specs fade-in">
   <div class="section-label">物件規格</div>
   <h2 class="section-title">數字說明</h2>
@@ -691,13 +629,12 @@
       <div class="spec-label">臨路路寬</div>
     </div>
     <div class="spec-card wide">
-      <div class="spec-value" style="font-size:1.2rem">農業用地</div>
+      <div class="spec-value" style="font-size:1.4rem">農業用地</div>
       <div class="spec-label">土地使用分區 · 可申請農保</div>
     </div>
   </div>
 </section>
 
-<!-- GALLERY -->
 <div class="gallery fade-in">
   <div class="gallery-header">
     <div class="section-label">現場實景</div>
@@ -711,16 +648,29 @@
     <img class="gallery-img" src="33749610_6_b.jpeg" alt="田野近景" onclick="openLightbox(4)">
     <img class="gallery-img" src="33749610_1_b.jpeg" alt="育仁國小" onclick="openLightbox(5)">
   </div>
+  <div class="gallery-arrows">
+    <button class="gallery-arrow" onclick="scrollGallery(-1)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </button>
+    <div class="gallery-progress">
+      <div class="gallery-progress-bar" id="galleryProgress"></div>
+    </div>
+    <button class="gallery-arrow" onclick="scrollGallery(1)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </button>
+  </div>
 </div>
 
-<!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" onclick="closeLightbox()">×</button>
   <img id="lightboxImg" src="" alt="">
   <div class="lightbox-counter" id="lightboxCounter"></div>
 </div>
 
-<!-- LOCATION -->
 <section class="location fade-in">
   <div class="section-label">物件位置</div>
   <h2 class="section-title">桃園觀音，<br>農村慢活地帶</h2>
@@ -743,7 +693,6 @@
   </div>
 </section>
 
-<!-- CTA -->
 <section class="cta fade-in">
   <div class="cta-label">聯絡仲介</div>
   <h2 class="cta-title">想進一步了解<br>這塊土地？</h2>
@@ -769,7 +718,6 @@
 </footer>
 
 <script>
-  // Hero Slideshow
   let currentSlide = 0;
   const slides = document.querySelectorAll('.hero-slide');
   const dots = document.querySelectorAll('.hero-dot');
@@ -786,7 +734,23 @@
     goSlide((currentSlide + 1) % slides.length);
   }, 4000);
 
-  // Lightbox
+  const galleryScroll = document.querySelector('.gallery-scroll');
+  const progressBar = document.getElementById('galleryProgress');
+
+  function updateProgress() {
+    const max = galleryScroll.scrollWidth - galleryScroll.clientWidth;
+    const pct = max > 0 ? (galleryScroll.scrollLeft / max) * 100 : 0;
+    progressBar.style.width = pct + '%';
+  }
+
+  function scrollGallery(dir) {
+    galleryScroll.scrollBy({ left: dir * 280, behavior: 'smooth' });
+    setTimeout(updateProgress, 350);
+  }
+
+  galleryScroll.addEventListener('scroll', updateProgress);
+  updateProgress();
+
   const galleryImgs = [
     '33749610_2_b.jpeg',
     '33749610_3_b.jpeg',
@@ -814,7 +778,6 @@
     if (e.target === this) closeLightbox();
   });
 
-  // Scroll fade-in
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
