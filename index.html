@@ -85,11 +85,15 @@
   }
 
   .hero-tag {
-    font-size: 17px;
+    display: inline-block;
+    font-size: 14px;
     font-weight: 400;
-    letter-spacing: 0.2em;
-    color: rgba(255,255,255,0.95);
-    margin-bottom: 0.75rem;
+    letter-spacing: 0.15em;
+    color: white;
+    background: rgba(58, 90, 58, 0.75);
+    padding: 0.35rem 0.85rem;
+    border-radius: 4px;
+    margin-bottom: 0.85rem;
     text-transform: uppercase;
   }
 
@@ -109,14 +113,14 @@
     font-weight: 400;
     color: rgba(255,255,255,0.92);
     letter-spacing: 0.05em;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
   }
 
   .hero-price-row {
     display: flex;
     align-items: baseline;
     gap: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.35rem;
   }
 
   .hero-price {
@@ -127,7 +131,13 @@
   }
 
   .hero-price-sub {
-    font-size: 18px;
+    font-size: 16px;
+    color: rgba(255,255,255,0.88);
+    margin-bottom: 0.25rem;
+  }
+
+  .hero-price-sub2 {
+    font-size: 16px;
     color: rgba(255,255,255,0.88);
     margin-bottom: 2rem;
   }
@@ -546,7 +556,8 @@
     <div class="hero-price-row">
       <div class="hero-price">906<span style="font-size:1.2rem">萬</span></div>
     </div>
-    <p class="hero-price-sub">2.65萬元／坪 · 總面積 342.43坪</p>
+    <p class="hero-price-sub">2.65萬元／坪</p>
+    <p class="hero-price-sub2">總面積 342.43坪</p>
   </div>
   <div class="hero-dots" id="heroDots">
     <div class="hero-dot active" onclick="goSlide(0)"></div>
@@ -714,7 +725,7 @@
 </section>
 
 <footer>
-  <p>本頁面由中信房屋提供 · 物件資訊以實際為準<br>© 2024 中信房屋 Chunghsin Realty</p>
+  <p>本頁面由中信房屋提供 · 物件資訊以實際為準<br>© 2026 中信房屋 Chunghsin Realty</p>
 </footer>
 
 <script>
